@@ -2,15 +2,15 @@
 using namespace std;
 
 void generateBinaryStrings(int k,string fin,int index){
-    if(index==k+1){
+    if(index==k){
         cout<<fin<<" ";
         return;
     }
     fin+="0";
-    generateBinaryString(k,fin,index+1);
+    generateBinaryStrings(k,fin,index+1);
     fin.pop_back();
     fin+="1";
-    generateBinaryString(k,fin,index+1);
+    generateBinaryStrings(k,fin,index+1);
 }
 
 int main(){
