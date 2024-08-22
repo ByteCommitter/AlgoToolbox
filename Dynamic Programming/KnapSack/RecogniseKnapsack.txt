@@ -1,0 +1,14 @@
+How to recognise the type of problems that come under KnapSack?
+
+Instead of having two arrays, we could have a single array as well
+Given a number of items, when we have a choice of taking it or not and a target to reach
+Then it's a knapsack pattern
+
+
+Similar problems to the knapSack problem:
+1.Subset problem
+2.Equal Sum Partition
+3.Count of Subset Sum
+4.Minimum subset sum difference
+5.Target Sum
+6.#. of subsets with given difference

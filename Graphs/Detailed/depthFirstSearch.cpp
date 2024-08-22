@@ -5,7 +5,7 @@ void dfs(vector<int> adj[],vector<int> vis,vector<int> dfsVec,int node){
     dfsVec.push_back(node);
     for(auto it: adj[node]){
         if(!vis[it]){
-            dfs(it);
+            dfs(adj,vis,dfsVec,it);
         }
     }
 }   
