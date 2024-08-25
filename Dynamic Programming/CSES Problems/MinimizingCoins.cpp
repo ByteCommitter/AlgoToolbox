@@ -48,8 +48,8 @@ int getMinimumCoins(vector<int>& nums,int target){
 int main(){
     int n;
     cin>>n;
-    int target;
-    cin>>target;
+    int amount;
+    cin>>amount;
 
     vector<int> nums(n,0);
     for(int i=0;i<n;i++){
@@ -57,6 +57,31 @@ int main(){
         cin>>ent;
         nums[i]=ent;
     }
-    cout<<getMinimumCoins(nums,target);
+    //There is one approach where we could use a single 1 d  dp vector to solve the problem
+    //This Solution is extremely memory effecient, but not time effecient
+
+    vector<int>dp(amount+1,-1);
+    dp[0]=0;
+
+    sort(nums.begin(),nums.end());
+
+    for(int i=1;i<=amount;i++){
+        int mini=INT_MAX;
+        for(int j=0;j<nums.size();j++){
+            if(nums[j]<=i && dp[i-nums[j]]!=-1){
+                mini=min(mini,dp[i-nums[j]]+1);
+            }
+        }
+        if(mini==INT_MAX){
+            continue;
+        }
+        dp[i]=mini;
+    }
+    
+    cout<<dp[amount];
+
+
+    //2D vector DP SOLution:
+    //cout<<getMinimumCoins(nums,target);
     return 0;
 }
