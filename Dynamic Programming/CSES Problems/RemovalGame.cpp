@@ -16,6 +16,9 @@ int main(){
     //any participant would ideally pick the last element here
     //how could we make sure we pick the last and not the first element??
 
+    //other test case
+    //4 8 7 1000 9
+
     
 
 }
