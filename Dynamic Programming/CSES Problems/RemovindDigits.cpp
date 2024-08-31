@@ -20,6 +20,5 @@ int main(){
         int removve=getHighest(n);
         n-=removve;
     }
-
     cout<<cnt;
 }
