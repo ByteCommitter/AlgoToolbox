@@ -23,5 +23,5 @@ one million two hundred thirty four thousand five hundred sixty seven
 
 // we find out every possible number from 1 to 999 and then implement over to 10^12.....
 
-
-//SOLVABLE...do if time
+//Solve for the first digits,
+//Caall a recursive function for every group of 3 digits...
